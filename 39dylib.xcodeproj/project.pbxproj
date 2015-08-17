@@ -6,30 +6,20 @@
 	objectVersion = 45;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A410468114399910009BC234 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410468014399910009BC234 /* CoreFoundation.framework */; };
-		A41046B214399946009BC234 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41046B114399946009BC234 /* IOKit.framework */; };
-		A4B6335C1234678B009A15D2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6335B1234678B009A15D2 /* main.cpp */; };
-		A4B63360123467C6009A15D2 /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6335F123467C6009A15D2 /* buffer.cpp */; };
-		A4B6336612346820009A15D2 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6336512346820009A15D2 /* list.cpp */; };
-		A4B6336A1234684C009A15D2 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B633691234684C009A15D2 /* md5.cpp */; };
-		A4B6336D12346876009A15D2 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6336C12346876009A15D2 /* socket.cpp */; };
-		A4B63373123468B7009A15D2 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B63372123468B7009A15D2 /* tools.cpp */; };
-		A4B63375123468CA009A15D2 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B63374123468CA009A15D2 /* buffer.h */; };
-		A4B63377123468F8009A15D2 /* includes.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B63376123468F8009A15D2 /* includes.h */; };
-		A4B6337912346903009A15D2 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B6337812346903009A15D2 /* list.h */; };
-		A4B6337D12346919009A15D2 /* socket.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B6337C12346919009A15D2 /* socket.h */; };
-		A4B6337F12346932009A15D2 /* tools.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B6337E12346932009A15D2 /* tools.h */; };
-		D2AAC0CC05546C4400DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-/* End PBXBuildFile section */
+/* Begin PBXCopyFilesBuildPhase section */
+		FF388E471B819CDE00C67D9B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* 39dylib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 39dylib_Prefix.pch; sourceTree = "<group>"; };
-		A410468014399910009BC234 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		A41046B114399946009BC234 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		A4941DC912B3801E00B8A6CA /* 39dylibProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = 39dylibProj.xcconfig; sourceTree = "<group>"; };
 		A4941DCA12B3801E00B8A6CA /* 39dylibTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = 39dylibTarget.xcconfig; sourceTree = "<group>"; };
 		A4B6335B1234678B009A15D2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -43,18 +33,23 @@
 		A4B6337812346903009A15D2 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
 		A4B6337C12346919009A15D2 /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
 		A4B6337E12346932009A15D2 /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
-		D2A6134D07B89F6200DD23D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		D2AAC0C705546C1D00DB518D /* 39dylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = 39dylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF388E271B819BD900C67D9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FF388E2E1B819C4E00C67D9B /* lib39dylibMac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = lib39dylibMac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF388E491B819CDE00C67D9B /* lib39dylibiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = lib39dylibiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D2AAC0C505546C1D00DB518D /* Frameworks */ = {
+		FF388E2B1B819C4E00C67D9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AAC0CC05546C4400DB518D /* Cocoa.framework in Frameworks */,
-				A410468114399910009BC234 /* CoreFoundation.framework in Frameworks */,
-				A41046B214399946009BC234 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF388E461B819CDE00C67D9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +59,8 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC0C705546C1D00DB518D /* 39dylib.dylib */,
+				FF388E2E1B819C4E00C67D9B /* lib39dylibMac.dylib */,
+				FF388E491B819CDE00C67D9B /* lib39dylibiOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,39 +72,10 @@
 				A4941DCA12B3801E00B8A6CA /* 39dylibTarget.xcconfig */,
 				A4B6335B1234678B009A15D2 /* main.cpp */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
-				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				FF388E291B819BFD00C67D9B /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
 			name = 39dylib;
-			sourceTree = "<group>";
-		};
-		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
-				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
-			);
-			name = "External Frameworks and Libraries";
-			sourceTree = "<group>";
-		};
-		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A410468014399910009BC234 /* CoreFoundation.framework */,
-				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
-				D2A6134D07B89F6200DD23D3 /* CoreData.framework */,
-				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
-				A41046B114399946009BC234 /* IOKit.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -129,46 +96,76 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		FF388E291B819BFD00C67D9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF388E271B819BD900C67D9B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D2AAC0C305546C1D00DB518D /* Headers */ = {
+		FF388E2C1B819C4E00C67D9B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B63375123468CA009A15D2 /* buffer.h in Headers */,
-				A4B63377123468F8009A15D2 /* includes.h in Headers */,
-				A4B6337912346903009A15D2 /* list.h in Headers */,
-				A4B6337D12346919009A15D2 /* socket.h in Headers */,
-				A4B6337F12346932009A15D2 /* tools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC0C605546C1D00DB518D /* 39dylib */ = {
+		FF388E2D1B819C4E00C67D9B /* 39dylibMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB917D08733D990010E9CD /* Build configuration list for PBXNativeTarget "39dylib" */;
+			buildConfigurationList = FF388E3F1B819C4E00C67D9B /* Build configuration list for PBXNativeTarget "39dylibMac" */;
 			buildPhases = (
-				D2AAC0C305546C1D00DB518D /* Headers */,
-				D2AAC0C405546C1D00DB518D /* Sources */,
-				D2AAC0C505546C1D00DB518D /* Frameworks */,
+				FF388E2A1B819C4E00C67D9B /* Sources */,
+				FF388E2B1B819C4E00C67D9B /* Frameworks */,
+				FF388E2C1B819C4E00C67D9B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = 39dylib;
-			productName = 39dylib;
-			productReference = D2AAC0C705546C1D00DB518D /* 39dylib.dylib */;
+			name = 39dylibMac;
+			productName = "39dylib Mac";
+			productReference = FF388E2E1B819C4E00C67D9B /* lib39dylibMac.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
+		};
+		FF388E481B819CDE00C67D9B /* 39dylibiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF388E5A1B819CDF00C67D9B /* Build configuration list for PBXNativeTarget "39dylibiOS" */;
+			buildPhases = (
+				FF388E451B819CDE00C67D9B /* Sources */,
+				FF388E461B819CDE00C67D9B /* Frameworks */,
+				FF388E471B819CDE00C67D9B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 39dylibiOS;
+			productName = "lib39dylib iOS";
+			productReference = FF388E491B819CDE00C67D9B /* lib39dylibiOS.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					FF388E2D1B819C4E00C67D9B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					FF388E481B819CDE00C67D9B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
 			buildConfigurationList = 1DEB918108733D990010E9CD /* Build configuration list for PBXProject "39dylib" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -181,61 +178,30 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC0C605546C1D00DB518D /* 39dylib */,
+				FF388E2D1B819C4E00C67D9B /* 39dylibMac */,
+				FF388E481B819CDE00C67D9B /* 39dylibiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D2AAC0C405546C1D00DB518D /* Sources */ = {
+		FF388E2A1B819C4E00C67D9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B6335C1234678B009A15D2 /* main.cpp in Sources */,
-				A4B63360123467C6009A15D2 /* buffer.cpp in Sources */,
-				A4B6336612346820009A15D2 /* list.cpp in Sources */,
-				A4B6336A1234684C009A15D2 /* md5.cpp in Sources */,
-				A4B6336D12346876009A15D2 /* socket.cpp in Sources */,
-				A4B63373123468B7009A15D2 /* tools.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF388E451B819CDE00C67D9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1DEB917E08733D990010E9CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = 39dylib_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = 39dylib;
-			};
-			name = Debug;
-		};
-		1DEB917F08733D990010E9CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = 39dylib_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = 39dylib;
-			};
-			name = Release;
-		};
 		1DEB918208733D990010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -264,23 +230,186 @@
 			};
 			name = Release;
 		};
+		FF388E401B819C4E00C67D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FF388E411B819C4E00C67D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FF388E5B1B819CDF00C67D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		FF388E5C1B819CDF00C67D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB917D08733D990010E9CD /* Build configuration list for PBXNativeTarget "39dylib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DEB917E08733D990010E9CD /* Debug */,
-				1DEB917F08733D990010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1DEB918108733D990010E9CD /* Build configuration list for PBXProject "39dylib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB918208733D990010E9CD /* Debug */,
 				1DEB918308733D990010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF388E3F1B819C4E00C67D9B /* Build configuration list for PBXNativeTarget "39dylibMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF388E401B819C4E00C67D9B /* Debug */,
+				FF388E411B819C4E00C67D9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF388E5A1B819CDF00C67D9B /* Build configuration list for PBXNativeTarget "39dylibiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF388E5B1B819CDF00C67D9B /* Debug */,
+				FF388E5C1B819CDF00C67D9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

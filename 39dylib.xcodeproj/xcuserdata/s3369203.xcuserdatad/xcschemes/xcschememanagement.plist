@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>39dylib.xcscheme</key>
+		<key>39dylib Mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>39dylib iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -13,6 +18,26 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>D2AAC0C605546C1D00DB518D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF388E2D1B819C4E00C67D9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF388E371B819C4E00C67D9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF388E481B819CDE00C67D9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF388E521B819CDF00C67D9B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

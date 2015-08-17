@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2AAC0C605546C1D00DB518D"
-               BuildableName = "39dylib.dylib"
-               BlueprintName = "39dylib"
+               BlueprintIdentifier = "FF388E2D1B819C4E00C67D9B"
+               BuildableName = "lib39dylibMac.dylib"
+               BlueprintName = "39dylibMac"
+               ReferencedContainer = "container:39dylib.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FF388E371B819C4E00C67D9B"
+               BuildableName = "39dylib MacTests.xctest"
+               BlueprintName = "39dylib MacTests"
                ReferencedContainer = "container:39dylib.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +42,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FF388E371B819C4E00C67D9B"
+               BuildableName = "39dylib MacTests.xctest"
+               BlueprintName = "39dylib MacTests"
+               ReferencedContainer = "container:39dylib.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FF388E2D1B819C4E00C67D9B"
+            BuildableName = "lib39dylibMac.dylib"
+            BlueprintName = "39dylibMac"
+            ReferencedContainer = "container:39dylib.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -42,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2AAC0C605546C1D00DB518D"
-            BuildableName = "39dylib.dylib"
-            BlueprintName = "39dylib"
+            BlueprintIdentifier = "FF388E2D1B819C4E00C67D9B"
+            BuildableName = "lib39dylibMac.dylib"
+            BlueprintName = "39dylibMac"
             ReferencedContainer = "container:39dylib.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2AAC0C605546C1D00DB518D"
-            BuildableName = "39dylib.dylib"
-            BlueprintName = "39dylib"
+            BlueprintIdentifier = "FF388E2D1B819C4E00C67D9B"
+            BuildableName = "lib39dylibMac.dylib"
+            BlueprintName = "39dylibMac"
             ReferencedContainer = "container:39dylib.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
