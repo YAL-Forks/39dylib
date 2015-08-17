@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A410468114399910009BC234 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410468014399910009BC234 /* CoreFoundation.framework */; };
+		A41046B214399946009BC234 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41046B114399946009BC234 /* IOKit.framework */; };
+		A4B6335C1234678B009A15D2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6335B1234678B009A15D2 /* main.cpp */; };
+		A4B63360123467C6009A15D2 /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6335F123467C6009A15D2 /* buffer.cpp */; };
+		A4B6336612346820009A15D2 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6336512346820009A15D2 /* list.cpp */; };
+		A4B6336A1234684C009A15D2 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B633691234684C009A15D2 /* md5.cpp */; };
+		A4B6336D12346876009A15D2 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6336C12346876009A15D2 /* socket.cpp */; };
+		A4B63373123468B7009A15D2 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B63372123468B7009A15D2 /* tools.cpp */; };
+		A4B63375123468CA009A15D2 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B63374123468CA009A15D2 /* buffer.h */; };
+		A4B63377123468F8009A15D2 /* includes.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B63376123468F8009A15D2 /* includes.h */; };
+		A4B6337912346903009A15D2 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B6337812346903009A15D2 /* list.h */; };
+		A4B6337D12346919009A15D2 /* socket.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B6337C12346919009A15D2 /* socket.h */; };
+		A4B6337F12346932009A15D2 /* tools.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B6337E12346932009A15D2 /* tools.h */; };
+		D2AAC0CC05546C4400DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* 39dylib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 39dylib_Prefix.pch; sourceTree = "<group>"; };
+		A410468014399910009BC234 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A41046B114399946009BC234 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		A4941DC912B3801E00B8A6CA /* 39dylibProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = 39dylibProj.xcconfig; sourceTree = "<group>"; };
+		A4941DCA12B3801E00B8A6CA /* 39dylibTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = 39dylibTarget.xcconfig; sourceTree = "<group>"; };
+		A4B6335B1234678B009A15D2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A4B6335F123467C6009A15D2 /* buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buffer.cpp; sourceTree = "<group>"; };
+		A4B6336512346820009A15D2 /* list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = list.cpp; sourceTree = "<group>"; };
+		A4B633691234684C009A15D2 /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		A4B6336C12346876009A15D2 /* socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socket.cpp; sourceTree = "<group>"; };
+		A4B63372123468B7009A15D2 /* tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
+		A4B63374123468CA009A15D2 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		A4B63376123468F8009A15D2 /* includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = includes.h; sourceTree = "<group>"; };
+		A4B6337812346903009A15D2 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		A4B6337C12346919009A15D2 /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
+		A4B6337E12346932009A15D2 /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
+		D2A6134D07B89F6200DD23D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		D2AAC0C705546C1D00DB518D /* 39dylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = 39dylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC0C505546C1D00DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AAC0CC05546C4400DB518D /* Cocoa.framework in Frameworks */,
+				A410468114399910009BC234 /* CoreFoundation.framework in Frameworks */,
+				A41046B214399946009BC234 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC0C705546C1D00DB518D /* 39dylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* 39dylib */ = {
+			isa = PBXGroup;
+			children = (
+				A4941DC912B3801E00B8A6CA /* 39dylibProj.xcconfig */,
+				A4941DCA12B3801E00B8A6CA /* 39dylibTarget.xcconfig */,
+				A4B6335B1234678B009A15D2 /* main.cpp */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = 39dylib;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A410468014399910009BC234 /* CoreFoundation.framework */,
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2A6134D07B89F6200DD23D3 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				A41046B114399946009BC234 /* IOKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A4B6337C12346919009A15D2 /* socket.h */,
+				A4B63374123468CA009A15D2 /* buffer.h */,
+				A4B63376123468F8009A15D2 /* includes.h */,
+				A4B6337812346903009A15D2 /* list.h */,
+				A4B6337E12346932009A15D2 /* tools.h */,
+				A4B6335F123467C6009A15D2 /* buffer.cpp */,
+				32DBCF5E0370ADEE00C91783 /* 39dylib_Prefix.pch */,
+				A4B6336512346820009A15D2 /* list.cpp */,
+				A4B633691234684C009A15D2 /* md5.cpp */,
+				A4B6336C12346876009A15D2 /* socket.cpp */,
+				A4B63372123468B7009A15D2 /* tools.cpp */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC0C305546C1D00DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B63375123468CA009A15D2 /* buffer.h in Headers */,
+				A4B63377123468F8009A15D2 /* includes.h in Headers */,
+				A4B6337912346903009A15D2 /* list.h in Headers */,
+				A4B6337D12346919009A15D2 /* socket.h in Headers */,
+				A4B6337F12346932009A15D2 /* tools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC0C605546C1D00DB518D /* 39dylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB917D08733D990010E9CD /* Build configuration list for PBXNativeTarget "39dylib" */;
+			buildPhases = (
+				D2AAC0C305546C1D00DB518D /* Headers */,
+				D2AAC0C405546C1D00DB518D /* Sources */,
+				D2AAC0C505546C1D00DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 39dylib;
+			productName = 39dylib;
+			productReference = D2AAC0C705546C1D00DB518D /* 39dylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB918108733D990010E9CD /* Build configuration list for PBXProject "39dylib" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* 39dylib */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC0C605546C1D00DB518D /* 39dylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC0C405546C1D00DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B6335C1234678B009A15D2 /* main.cpp in Sources */,
+				A4B63360123467C6009A15D2 /* buffer.cpp in Sources */,
+				A4B6336612346820009A15D2 /* list.cpp in Sources */,
+				A4B6336A1234684C009A15D2 /* md5.cpp in Sources */,
+				A4B6336D12346876009A15D2 /* socket.cpp in Sources */,
+				A4B63373123468B7009A15D2 /* tools.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB917E08733D990010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = 39dylib_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = 39dylib;
+			};
+			name = Debug;
+		};
+		1DEB917F08733D990010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = 39dylib_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = 39dylib;
+			};
+			name = Release;
+		};
+		1DEB918208733D990010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		1DEB918308733D990010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB917D08733D990010E9CD /* Build configuration list for PBXNativeTarget "39dylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB917E08733D990010E9CD /* Debug */,
+				1DEB917F08733D990010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB918108733D990010E9CD /* Build configuration list for PBXProject "39dylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB918208733D990010E9CD /* Debug */,
+				1DEB918308733D990010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

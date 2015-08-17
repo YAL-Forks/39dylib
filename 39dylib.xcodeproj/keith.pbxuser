@@ -1,0 +1,17 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D2AAC0C605546C1D00DB518D /* 39dylib */;
+		codeSenseManager = 53F6240C123726D200888EE0 /* Code sense */;
+		userBuildSettings = {
+		};
+	};
+	53F6240C123726D200888EE0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D2AAC0C605546C1D00DB518D /* 39dylib */ = {
+		activeExec = 0;
+	};
+}
