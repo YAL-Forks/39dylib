@@ -18,5 +18,5 @@ You can get binaries for 39dylib from http://www.vetragames.com/software/. This 
 
 ## Licence 
 
-39dylib is licensed under the GNU Lesser General Public Licence licence, version 2.1. You can read a copy of the licence [here].(http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html) 
+39dylib is licensed under the GNU Lesser General Public Licence licence, version 2.1. You can read a copy of the licence [here](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html).
 
