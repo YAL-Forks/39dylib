@@ -29,7 +29,7 @@ void CalculateMD5(char *, int, char *);
 class CTools
 {
 public:
-	static char* getmacaddress();
+	static const char* getmacaddress();
 	static char* md5buffer(CBuffer*buff);
 	static char* md5string(char*str);
 	static unsigned int ip2uint(char*ip);
@@ -38,6 +38,8 @@ public:
 	static void encryptedbuffer(CBuffer*buff, char*key);
 	static bool comparematch(char*string, char*wild);
 	static unsigned int adler32(CBuffer*buff);
+
+    //Do we even need file handling functions? TODO: Research why they are needed...
 #if 0
 	static HANDLE BinOpen(char*filename, int mode);
 	static bool BinClose(HANDLE hwnd);

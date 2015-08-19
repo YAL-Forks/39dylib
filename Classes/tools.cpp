@@ -25,14 +25,16 @@
 #include "tools.h"
 #include <ifaddrs.h>
 
+#include "Abstractor.h"
+
 
 
 typedef struct in_addr IN_ADDR;
 
-char* CTools::getmacaddress()//http://www.codeguru.com/Cpp/I-N/network/networkinformation/article.php/c5451
+const char* CTools::getmacaddress()//http://www.codeguru.com/Cpp/I-N/network/networkinformation/article.php/c5451
 {
-#if 0
-	static char retval[20];
+    //Preserve this code for the eventual Windows bit.
+	/*static char retval[20];
 	IP_ADAPTER_INFO AdapterInfo[16];
 	DWORD dwBufLen = sizeof(AdapterInfo);
 	DWORD dwStatus = GetAdaptersInfo(AdapterInfo, &dwBufLen);
@@ -43,12 +45,9 @@ char* CTools::getmacaddress()//http://www.codeguru.com/Cpp/I-N/network/networkin
 		sprintf(retval, "%02X-%02X-%02X-%02X-%02X-%02X", AdapterInfo->Address[0], AdapterInfo->Address[1],AdapterInfo->Address[2],AdapterInfo->Address[3], AdapterInfo->Address[4], AdapterInfo->Address[5]);
 	} else retval[0]= '\0';
 	return retval;
-#else
-    // this whole API is horrible, this stub is horribler.
-    // TODO: use IOKit to get this info; Apple has sample code
-	//return (char*)"%00-00-00-00-00-00";
-//	return (char*)GetMACAddress();
-	#endif
+     */
+    
+    return Abstractor::instance()->getMacAddress().c_str();
 }
 
 char* CTools::md5buffer(CBuffer *buff)

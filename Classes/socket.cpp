@@ -23,6 +23,7 @@
  */
 
 #include "socket.h"
+#include "buffer.h"
 
 socklen_t SenderAddrSize = sizeof(SOCKADDR_IN);
 SOCKADDR_IN CSocket::SenderAddr;
@@ -166,7 +167,7 @@ int CSocket::sendmessage(char *ip, int port, CBuffer *source)
 		addr.sin_family = AF_INET;
 		addr.sin_port = htons(port);
 		addr.sin_addr.s_addr = inet_addr(ip);
-		size = sendto(sockid, source->data, size, 0, (SOCKADDR *)&addr, sizeof(SOCKADDR_IN));
+		size = (int)sendto(sockid, source->data, size, 0, (SOCKADDR *)&addr, sizeof(SOCKADDR_IN));
 	}
 	else
 	{
@@ -176,14 +177,14 @@ int CSocket::sendmessage(char *ip, int port, CBuffer *source)
 		{
 			sendbuff.writeushort(source->count);
 			sendbuff.addBuffer(source);
-			size = send(sockid, sendbuff.data, sendbuff.count, 0);
+			size = (int)send(sockid, sendbuff.data, sendbuff.count, 0);
 		}else if(format == 1)
 		{
 			sendbuff.addBuffer(source);
 			sendbuff.writechars(formatstr);
-			size = send(sockid, sendbuff.data, sendbuff.count, 0);
+			size = (int)send(sockid, sendbuff.data, sendbuff.count, 0);
 		}else if(format == 2)
-			size = send(sockid, source->data, source->count, 0);
+			size = (int)send(sockid, source->data, source->count, 0);
 	}
 	if(size == SOCKET_ERROR)return -WSAGetLastError();
 	return size;
@@ -192,7 +193,7 @@ int CSocket::sendmessage(char *ip, int port, CBuffer *source)
 int CSocket::receivetext(char*buf, int max)
 {
 	int len = (int)strlen(formatstr);
-	if((max = recv(sockid, buf, max, MSG_PEEK)) != SOCKET_ERROR)
+	if((max = (int)recv(sockid, buf, max, MSG_PEEK)) != SOCKET_ERROR)
 	{
 		int i, ii;
 		for(i = 0; i < max; i ++)
@@ -201,7 +202,7 @@ int CSocket::receivetext(char*buf, int max)
 				if(buf[i+ii] != formatstr[ii])
 					break;
 			if(ii == len)
-				return recv(sockid, buf, i + len, 0);
+				return (int)recv(sockid, buf, i + len, 0);
 		}
 	}
 	return -1;
@@ -215,7 +216,7 @@ int CSocket::receivemessage(int len, CBuffer*destination)
 	{
 		size = 8195;
 		buff = new char[size];
-		size = recvfrom(sockid, buff, size, 0, (SOCKADDR *)&SenderAddr, &SenderAddrSize);
+		size = (int)recvfrom(sockid, buff, size, 0, (SOCKADDR *)&SenderAddr, &SenderAddrSize);
 	} else
 	{
 		if(format == 0 && !len)
@@ -223,7 +224,7 @@ int CSocket::receivemessage(int len, CBuffer*destination)
 			unsigned short length;
 			if(recv(sockid, (char*)&length, 2, 0) == SOCKET_ERROR)return -1;
 			buff = new char[length];
-			size = recv(sockid, buff, length, 0);
+			size = (int)recv(sockid, buff, length, 0);
 		} else if(format == 1 && !len)
 		{
 			size = 65536;
@@ -232,7 +233,7 @@ int CSocket::receivemessage(int len, CBuffer*destination)
 		} else if(format == 2 || len > 0)
 		{
 			buff = new char[len];
-			size = recv(sockid, buff, len, 0);
+			size = (int)recv(sockid, buff, len, 0);
 		}
 	}
 	if(size > 0)
@@ -249,7 +250,7 @@ int CSocket::peekmessage(int size, CBuffer*destination)
 	if(sockid<0)return -1;
 	if(size == 0)size = 65536;
 	char *buff = new char[size];
-	size = recvfrom(sockid, buff, size, MSG_PEEK, (SOCKADDR *)&SenderAddr, &SenderAddrSize);
+	size = (int)recvfrom(sockid, buff, size, MSG_PEEK, (SOCKADDR *)&SenderAddr, &SenderAddrSize);
 	if(size < 0)
 	{
 		delete buff;
@@ -296,18 +297,15 @@ int CSocket::SetFormat(int mode, char* sep)
 
 int CSocket::SockExit(void)
 {
-#if 0
-	WSACleanup();
-#endif
+	//WSACleanup(); Windows stuff, abstract away into platform specific class.
 	return 1;
 }
 int CSocket::SockStart(void)
 {
-#if 0
-	WSADATA wsaData;
-	WSAStartup(MAKEWORD(1,1),&wsaData);
-#endif
-	return 1;
+	//WSADATA wsaData;
+	//WSAStartup(MAKEWORD(1,1),&wsaData);
+    //Windows stuff as well, abstract away into platform specific code.
+    return 1;
 }
 
 char* CSocket::myhost()

@@ -22,9 +22,11 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+
 #include "includes.h"
-#include "buffer.h"
+
+//Forward declare CBuffer, move Buffer.h include to the cpp file. Keeps the namespace clean. 
+class CBuffer;
 
 class CSocket
 {

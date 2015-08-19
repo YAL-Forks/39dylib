@@ -22,44 +22,32 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+/*
+ 39dylib TO DO: Deprecate this whole class and replace with a nice STD::Vector. 
+ */
+
+#ifndef ___39dylib__List__
+#define ___39dylib__List__
+
 #include "includes.h"
-class CBuffer
+class CList
 {
-	static char retval[20001];
+	void**items;
+	int buffsize;
 public:
-	char* data;
-	int BuffSize;
-	int readpos;
-	int writepos;
-	void StreamWrite(void *in, int size);
-	void StreamRead(void* out, int size);
 	int count;
-	CBuffer();
-	~CBuffer();
-	int writebyte(unsigned char a);
-	int writeshort(short a);
-	int writeushort(unsigned short a);
-	int writeint(int a);
-	int writeuint(unsigned int a);
-	int writefloat(float a);
-	int writedouble(double a);
-	int writechars(char*str);
-	int writestring(char*str);
-	unsigned char readbyte();
-	short readshort();
-	unsigned short readushort();
-	int readint();
-	unsigned int readuint();
-	float readfloat();
-	double readdouble();
-	char*readchars(int len);
-	char*readstring();
-	int bytesleft();
-	char* readsep(char* sep);
-	void StreamSet(int pos);
-	void clear();
-	int addBuffer(char*, int);
-	int addBuffer(CBuffer*);
-	char operator[](int index);
+	CList(int buffsize);
+	CList();
+	~CList();
+	int Add(void*item);
+	void Remove(void*item);
+	void Remove(int index);
+	void Clear();
+	void* operator[](int index);
+	void* item(int index);
+	void* find(void*item);
+	void set(int pos, void*item);
 };
+
+
+#endif
