@@ -15,6 +15,13 @@
 
 #endif
 
+
+#if(DYLIB_PLATFORM == DYLIB_WINDOWS)
+
+#include "WindowsAbstractor.h"
+
+#endif
+
 bool Abstractor::instanceFlag = false;
 bool Abstractor::createdProperlyFlag = false;
 Abstractor* Abstractor::single = NULL;
@@ -22,7 +29,7 @@ Abstractor* Abstractor::single = NULL;
 
 Abstractor::Abstractor()
 {
-    
+
 }
 
 
@@ -55,8 +62,14 @@ Abstractor* Abstractor::instance()
 Abstractor* Abstractor::createPlatformAbstractor()
 {
     #if(DYLIB_PLATFORM == DYLIB_IOS || DYLIB_PLATFORM == DYLIB_MACOS)
-    
+
     return DarwinAbstractor::instance();
-    
+
+    #endif
+
+    #if (DYLIB_PLATFORM == DYLIB_WINDOWS)
+
+    return WindowsAbstractor::instance();
+
     #endif
 }

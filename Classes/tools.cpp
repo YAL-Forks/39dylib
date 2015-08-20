@@ -1,24 +1,24 @@
 /*CREDITS:
- 
+
  39dylib by Uriel Griffin
  Based on the original code for 39dll, by Luke Graham. */
 
 /*
- * Copyright © 2011, Vetra Games. 
+ * Copyright © 2011, Vetra Games.
  *
  * This file is part of the 39dylib library.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either 
+ * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public 
+ *
+ * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
@@ -33,20 +33,6 @@ typedef struct in_addr IN_ADDR;
 
 const char* CTools::getmacaddress()//http://www.codeguru.com/Cpp/I-N/network/networkinformation/article.php/c5451
 {
-    //Preserve this code for the eventual Windows bit.
-	/*static char retval[20];
-	IP_ADAPTER_INFO AdapterInfo[16];
-	DWORD dwBufLen = sizeof(AdapterInfo);
-	DWORD dwStatus = GetAdaptersInfo(AdapterInfo, &dwBufLen);
-	assert(dwStatus == ERROR_SUCCESS);
-	PIP_ADAPTER_INFO pAdapterInfo = AdapterInfo;
-	if(pAdapterInfo)
-	{
-		sprintf(retval, "%02X-%02X-%02X-%02X-%02X-%02X", AdapterInfo->Address[0], AdapterInfo->Address[1],AdapterInfo->Address[2],AdapterInfo->Address[3], AdapterInfo->Address[4], AdapterInfo->Address[5]);
-	} else retval[0]= '\0';
-	return retval;
-     */
-    
     return Abstractor::instance()->getMacAddress().c_str();
 }
 

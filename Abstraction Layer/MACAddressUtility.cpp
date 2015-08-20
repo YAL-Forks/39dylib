@@ -12,6 +12,7 @@
 
 #if defined(WIN32) || defined(UNDER_CE)
 #   include <windows.h>
+#   include <Rpc.h>
 #   if defined(UNDER_CE)
 #       include <Iphlpapi.h>
 #   endif
@@ -49,7 +50,7 @@ long MACAddressUtility::GetMACAddress(unsigned char * result)
 
 inline long MACAddressUtility::GetMACAddressMSW(unsigned char * result)
 {
-    
+
 #if defined(UNDER_CE)
     IP_ADAPTER_INFO AdapterInfo[16]; // Allocate information
     DWORD dwBufLen = sizeof(AdapterInfo); // Save memory size of buffer
@@ -73,16 +74,16 @@ static kern_return_t FindEthernetInterfaces(io_iterator_t *matchingServices)
     kern_return_t       kernResult;
     CFMutableDictionaryRef  matchingDict;
     CFMutableDictionaryRef  propertyMatchDict;
-    
+
     matchingDict = IOServiceMatching(kIOEthernetInterfaceClass);
-    
+
     if (NULL != matchingDict)
     {
         propertyMatchDict =
         CFDictionaryCreateMutable(kCFAllocatorDefault, 0,
                                   &kCFTypeDictionaryKeyCallBacks,
                                   &kCFTypeDictionaryValueCallBacks);
-        
+
         if (NULL != propertyMatchDict)
         {
             CFDictionarySetValue(propertyMatchDict,
@@ -103,29 +104,29 @@ static kern_return_t GetMACAddress(io_iterator_t intfIterator,
     io_object_t     intfService;
     io_object_t     controllerService;
     kern_return_t   kernResult = KERN_FAILURE;
-    
+
     if (bufferSize < kIOEthernetAddressSize) {
         return kernResult;
     }
-    
+
     bzero(MACAddress, bufferSize);
-    
+
     while ((intfService = IOIteratorNext(intfIterator)))
     {
         CFTypeRef   MACAddressAsCFData;
-        
+
         // IONetworkControllers can't be found directly by the IOServiceGetMatchingServices call,
         // since they are hardware nubs and do not participate in driver matching. In other words,
         // registerService() is never called on them. So we've found the IONetworkInterface and will
         // get its parent controller by asking for it specifically.
-        
+
         // IORegistryEntryGetParentEntry retains the returned object,
         // so release it when we're done with it.
         kernResult =
         IORegistryEntryGetParentEntry(intfService,
                                       kIOServicePlane,
                                       &controllerService);
-        
+
         if (KERN_SUCCESS != kernResult) {
             printf("IORegistryEntryGetParentEntry returned 0x%08x\n", kernResult);
         }
@@ -138,21 +139,21 @@ static kern_return_t GetMACAddress(io_iterator_t intfIterator,
                                             0);
             if (MACAddressAsCFData) {
                 CFShow(MACAddressAsCFData); // for display purposes only; output goes to stderr
-                
+
                 // Get the raw bytes of the MAC address from the CFData
                 CFDataGetBytes((CFDataRef)MACAddressAsCFData,
                                CFRangeMake(0, kIOEthernetAddressSize), MACAddress);
                 CFRelease(MACAddressAsCFData);
             }
-            
+
             // Done with the parent Ethernet controller object so we release it.
             (void) IOObjectRelease(controllerService);
         }
-        
+
         // Done with the Ethernet interface object so we release it.
         (void) IOObjectRelease(intfService);
     }
-    
+
     return kernResult;
 }
 
@@ -168,7 +169,7 @@ long MACAddressUtility::GetMACAddressMAC(unsigned char * result)
     }
     while(false);
     (void) IOObjectRelease(intfIterator);
-    
+
     return 0;
 }
 
@@ -182,17 +183,17 @@ long MACAddressUtility::GetMACAddressLinux(unsigned char * result)
     char buf[1024];
     int s, i;
     int ok = 0;
-    
+
     s = socket(AF_INET, SOCK_DGRAM, 0);
     if (s == -1)
     {
         return -1;
     }
-    
+
     ifc.ifc_len = sizeof(buf);
     ifc.ifc_buf = buf;
     ioctl(s, SIOCGIFCONF, &ifc);
-    
+
     IFR = ifc.ifc_req;
     for (i = ifc.ifc_len / sizeof(struct ifreq); --i >= 0; IFR++)
     {
@@ -209,7 +210,7 @@ long MACAddressUtility::GetMACAddressLinux(unsigned char * result)
             }
         }
     }
-    
+
     shutdown(s, SHUT_RDWR);
     if (ok)
     {

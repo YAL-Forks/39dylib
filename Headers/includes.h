@@ -1,10 +1,10 @@
 /*CREDITS:
- 
+
  39dylib V2.0 by Uriel Griffin.
  This file is a part of the 2.0 version of 39dylib. It is a significant rewrite aimed to
  increase stability whilst remaining API compatible with 39dylib/39dll, revamping the internal
  codebase to support feature additions.
- 
+
  */
 
 /*
@@ -37,8 +37,9 @@
 #define DYLIB_MACOS 1
 #define DYLIB_IOS 2
 #define DYLIB_LINUX 3
+#define DYLIB_WINDOWS 4
 
-//Default definition, this gets redefined. 
+//Default definition, this gets redefined.
 #define DYLIB_PLATFORM DYLIB_UNKNOWN
 
 //At some point we want to remove duplicates and merge a significant amount of includes (like <vector>) in this file.
@@ -49,6 +50,10 @@
 
 #ifdef __linux__
 #include "IncludeLinux.h" //I presume it can be the same as 39dylib_Darwin?
+#endif
+
+#if defined _WIN32 || defined __CYGWIN__
+#include "IncludeWindows.h"
 #endif
 
 //Now,the new definition mechanism for 39dylib!

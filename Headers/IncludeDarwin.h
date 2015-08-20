@@ -7,13 +7,13 @@
 //
 
 /*CREDITS:
- 
+
  39dylib V2.0 by Uriel Griffin.
  Based on 39dll by Luke Graham.
  This file is a part of the 2.0 version of 39dylib. It is a significant rewrite aimed to
  increase stability whilst remaining API compatible with 39dylib/39dll, revamping the internal
  codebase to support feature additions.
- 
+
  */
 
 /*
@@ -71,6 +71,7 @@
 
 #else
 
+#undef DYLIB_PLATFORM
 #define DYLIB_PLATFORM DYLIB_UNKNOWN
 
 #endif
