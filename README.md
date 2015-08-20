@@ -35,6 +35,14 @@ If you're using an older (non networked) version of Game Maker or Game Maker Stu
 - **Android version:** port in progress. 
 - **Windows version:** fully ported!
 
+## How to compile
+
+On Mac OS X, simply open the Xcode project, select your target (Mac or iOS), and hit Build. The finished dylib will appear wherever you store your DerivedData.
+
+On Windows and Linux, simply open the Code::Blocks cbp file. Build and enjoy. :)
+
+Makefiles and other goodies for Android are comming soon. 
+
 ## Licence 
 
 39dylib is licensed under the GNU Lesser General Public Licence licence, version 2.1. You can read a copy of the licence [here](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html).
