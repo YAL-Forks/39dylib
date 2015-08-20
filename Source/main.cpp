@@ -1,11 +1,11 @@
 /*CREDITS:
- 
+
  39dylib V2.0 by Uriel Griffin.
  Based on 39dll by Luke Graham.
  This file is a part of the 2.0 version of 39dylib. It is a significant rewrite aimed to
  increase stability whilst remaining API compatible with 39dylib/39dll, revamping the internal
  codebase to support feature additions.
- 
+
  */
 
 /*
@@ -40,7 +40,7 @@
 
 
 /*
- 
+
 **Deprecate these in favour of the CoreManager
 
 CList buffers;
@@ -79,20 +79,20 @@ DYLIBEXPORT double tcplisten(double port, double max, double mode)
 DYLIBEXPORT double tcpaccept(double sockid, double mode)
 {
     CSocket*sock = CoreManager::instance()->getSocket(sockid);
-    
+
 	if(sock == NULL)return -1;
-    
+
 	CSocket*sock2 = sock->tcpaccept((int)mode);
-    
+
 	if(sock2 != NULL)return AddSocket(sock2);
-    
+
 	return -1;
 }
 
 DYLIBEXPORT char* tcpip(double sockid)
 {
 	CSocket*sock = CoreManager::instance()->getSocket(sockid);
-    
+
     if(sock == NULL)return NULL;
 	return sock->tcpip();
 }
@@ -128,14 +128,14 @@ DYLIBEXPORT double sendmessage(double sockid, char*ip, double port, double buffi
 {
 	CSocket*sock = CoreManager::instance()->getSocket(sockid);
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(sock == NULL)return -1;
 	if(buff == NULL)return -2;
-    
+
 	int size = sock->sendmessage(ip, (int)port, buff);
-    
+
 	if(size < 0)return -sock->lasterror();
-    
+
 	return size;
 }
 
@@ -143,10 +143,10 @@ DYLIBEXPORT double receivemessage(double sockid, double len, double buffid)
 {
     CSocket*sock = CoreManager::instance()->getSocket(sockid);
     CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(sock == NULL)return -1;
 	if(buff == NULL)return -2;
-    
+
 	int size = sock->receivemessage((int)len, buff);
 	if(size < 0)
 	{
@@ -161,7 +161,7 @@ DYLIBEXPORT double peekmessage(double sockid, double len, double buffid)
 {
     CSocket*sock = CoreManager::instance()->getSocket(sockid);
     CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(sock == NULL)return -1;
 	if(buff == NULL)return -2;
 	int size = sock->peekmessage((int)len, buff);
@@ -177,9 +177,9 @@ DYLIBEXPORT double peekmessage(double sockid, double len, double buffid)
 DYLIBEXPORT double setformat(double sockid, double mode, char*sep)
 {
     CSocket*sock = CoreManager::instance()->getSocket(sockid);
-    
+
 	if(sock == NULL)return -1;
-    
+
 	return sock->SetFormat((int)mode, sep);
 }
 
@@ -196,7 +196,7 @@ DYLIBEXPORT double lastinPort()
 DYLIBEXPORT double setsync(double sockid, double mode)
 {
     CSocket*sock = CoreManager::instance()->getSocket(sockid);
-    
+
 	if(sock == NULL)return -1;
 	sock->setsync((int)mode);
 	return 1;
@@ -205,21 +205,21 @@ DYLIBEXPORT double setsync(double sockid, double mode)
 DYLIBEXPORT double closesock(double sockid)
 {
     CSocket*sock = CoreManager::instance()->getSocket(sockid);
-    
+
 	if(sock == NULL)return -1;
-    
+
 	delete sock;
-    
+
 	//sockets.set((int)sockid, NULL);
     CoreManager::instance()->sockets[sockid] = NULL;
-    
+
 	return 1;
 }
 
 DYLIBEXPORT double socklasterror(double sockid)
 {
     CSocket*sock = CoreManager::instance()->getSocket(sockid);
-    
+
 	if(sock == NULL)return -1;
 	return -sock->lasterror();
 }
@@ -255,9 +255,9 @@ DYLIBEXPORT char* hostip(char*host)
 DYLIBEXPORT double getsocketid(double sockid)
 {
 	CSocket*sock = CoreManager::instance()->getSocket(sockid);
-    
+
 	if(sock == NULL)return -1;
-    
+
 	return sock->sockid;
 }
 
@@ -265,99 +265,99 @@ DYLIBEXPORT double getsocketid(double sockid)
 DYLIBEXPORT double writebyte(double val, double buffid)
 {
     CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writebyte((unsigned char)val);
 }
 
 DYLIBEXPORT double writeshort(double val, double buffid)
 {
     CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writeshort((short)val);
 }
 
 DYLIBEXPORT double writeushort(double val, double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writeushort((unsigned short)val);
 }
 
 DYLIBEXPORT double writeint(double val, double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writeint((int)val);
 }
 
 DYLIBEXPORT double writeuint(double val, double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writeuint((unsigned int)val);
 }
 
 DYLIBEXPORT double writefloat(double val, double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writefloat((float)val);
 }
 
 DYLIBEXPORT double writedouble(double val, double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writedouble(val);
 }
 
 DYLIBEXPORT double writechars(char*str, double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writechars(str);
 }
 
 DYLIBEXPORT double writestring(char*str, double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->writestring(str);
 }
 
 DYLIBEXPORT double readbyte(double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->readbyte();
 }
 
 DYLIBEXPORT double readshort(double buffid)
 {
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	return buff->readshort();
 }
 
@@ -465,51 +465,51 @@ DYLIBEXPORT double createbuffer()
 DYLIBEXPORT double freebuffer(double buffid)
 {
 	if(buffid == 0)return 0; //no deleting default buffer
-    
+
 	CBuffer*buff = CoreManager::instance()->getBuffer(buffid);
-    
+
 	if(buff == NULL)return 0;
-    
+
 	delete buff;
-    
-    //TODO: This feels weird. Why does he set the pointer to null rather than remove it from the list?
-    //TODO: Maybe make this more efficient?
+
+    //TODO: This seems a bit clunky. It's so that references set in GM are not scrambled, but it isn't very clean...
+    //TODO: Maybe make this more efficient? Somehow?
 	//buffers.set((int)buffid, NULL);
     CoreManager::instance()->buffers[buffid] = NULL;
-    
+
 	return 1;
 }
 
 DYLIBEXPORT double copybuffer(double destinationid, double sourceid)
 {
     CBuffer*destination = CoreManager::instance()->getBuffer(destinationid); //(CBuffer*)buffers.item((int)destinationid);
-    
+
 	if(destination == NULL)return 0;
-    
+
     CBuffer*source = CoreManager::instance()->getBuffer(sourceid); //(CBuffer*)buffers.item((int)sourceid);
-    
+
 	if(source == NULL)return 0;
-    
+
 	destination->addBuffer(source);
-    
+
 	return 1;
-	
+
 }
 
 DYLIBEXPORT double copybuffer2(double destinationid, double start, double len, double sourceid)
 {
     CBuffer*destination = CoreManager::instance()->getBuffer(destinationid); //(CBuffer*)buffers.item((int)destinationid);
-    
+
 	if(destination == NULL)return 0;
-    
+
     CBuffer*source = CoreManager::instance()->getBuffer(sourceid); //(CBuffer*)buffers.item((int)sourceid);
-    
+
 	if(source == NULL)return 0;
-    
+
 	destination->addBuffer(source->data+(int)start, (int)len);
-    
+
 	return 1;
-	
+
 }
 
 //tools
@@ -560,8 +560,8 @@ DYLIBEXPORT double netconnected()
 /*
  MASSIVE STUB HERE...
  WTF are these file functions anyways... must find out what they are used for and how to port them, if it's even needed.
- 
-double 
+
+double
 fileopen(char*name, double mode)
 {
 	HANDLE file = CTools::BinOpen(name, (int)mode);
@@ -570,7 +570,7 @@ fileopen(char*name, double mode)
 	return -1;
 }
 
-double 
+double
 fileclose(double fileid)
 {
 	HANDLE file = (HANDLE)files.item((int)fileid);
@@ -579,7 +579,7 @@ fileclose(double fileid)
 	return CTools::BinClose(file);
 }
 
-double 
+double
 filewrite(double fileid, double buffid)
 {
 	HANDLE file = (HANDLE)files.item((int)fileid);
@@ -589,7 +589,7 @@ filewrite(double fileid, double buffid)
 	return CTools::BinWrite(file, buff);
 }
 
-double 
+double
 fileread(double fileid, double bytes, double buffid)
 {
 	HANDLE file = (HANDLE)files.item((int)fileid);
@@ -598,21 +598,21 @@ fileread(double fileid, double bytes, double buffid)
 	if(buff == NULL)return -1;
 	return CTools::BinRead(file, (int)bytes, buff);
 }
-double 
+double
 filepos(double fileid)
 {
 	HANDLE file = (HANDLE)files.item((int)fileid);
 	if(file == NULL)return -1;
 	return CTools::BinGetPos(file);
 }
-double 
+double
 filesetpos(double fileid, double pos)
 {
 	HANDLE file = (HANDLE)files.item((int)fileid);
 	if(file == NULL)return -1;
 	return CTools::BinSetPos(file, (int)pos);
 }
-double 
+double
 filesize(double fileid)
 {
 	HANDLE file = (HANDLE)files.item((int)fileid);
@@ -621,17 +621,17 @@ filesize(double fileid)
 }
 #endif
 
-double 
+double
 iptouint(char*ip)
 {
 	return CTools::ip2uint(ip);
 }
-char* 
+char*
 uinttoip(double ip)
 {
 	return CTools::uint2ip((unsigned int)ip);
 }
-int 
+int
 AddBuffer(CBuffer*b)
 {
 	for(int i = 0; i < buffers.count; i ++)
@@ -646,7 +646,7 @@ AddBuffer(CBuffer*b)
 	return buffers.count-1;
 }
 
-int 
+int
 AddSocket(CSocket*b)
 {
 	for(int i = 0; i < sockets.count; i ++)
@@ -662,7 +662,7 @@ AddSocket(CSocket*b)
 }
 
 #if 0
-int 
+int
 AddFile(HANDLE b)
 {
 	for(int i = 0; i < files.count; i ++)
@@ -684,24 +684,24 @@ DYLIBEXPORT double dylibInit()
     //Initialise my beloved singletons.
     CoreManager::instance();
     Abstractor::createPlatformAbstractor();
-    
+
     //In the case of WinSock, initialise WinSock.
     CSocket::SockStart();
-    
+
     CoreManager::instance()->buffers.push_back(new CBuffer());
     CoreManager::instance()->sockets.push_back(new CSocket());  //dummy socket
-    
+
     return 1;
 }
 
 DYLIBEXPORT double dylibFree()
 {
-    
+
     CSocket::SockExit();
-    
-    //Calling the destructor on the CoreManager frees memory. 
+
+    //Calling the destructor on the CoreManager frees memory.
     CoreManager::instance()->~CoreManager();
-    
+
     return true;
 }
 
