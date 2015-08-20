@@ -2,30 +2,42 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="39DLL" />
+		<Option title="39dylib" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Classes\;" />
 		<Build>
 			<Target title="Debug">
-				<Option output=".\39DLL.dll" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Debug\" />
+				<Option output="./39dylib" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Build/Debug" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../39dylib" />
+					<Add directory="Headers" />
+					<Add directory="Abstraction Layer" />
+					<Add directory="Classes" />
 				</Compiler>
+				<Linker>
+					<Add directory="Abstraction Layer" />
+				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output=".\39DLL.dll" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Release\" />
+				<Option output="./39dylib" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Build/Release" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="../39dylib" />
+					<Add directory="Headers" />
+					<Add directory="Abstraction Layer" />
+					<Add directory="Classes" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,25 +46,44 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="../39dylib" />
+			<Add directory="Headers" />
+			<Add directory="Abstraction Layer" />
+			<Add directory="Classes" />
 		</Compiler>
 		<Linker>
 			<Add library="wsock32" />
 			<Add library="wininet" />
 			<Add library="iphlpapi" />
 		</Linker>
-		<Unit filename="buffer.cpp" />
-		<Unit filename="buffer.h" />
-		<Unit filename="includes.h" />
-		<Unit filename="list.cpp" />
-		<Unit filename="list.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="md5.cpp" />
-		<Unit filename="socket.cpp" />
-		<Unit filename="socket.h" />
-		<Unit filename="tools.cpp" />
-		<Unit filename="tools.h" />
+		<Unit filename="Abstraction Layer/Abstractor.cpp" />
+		<Unit filename="Abstraction Layer/Abstractor.h" />
+		<Unit filename="Abstraction Layer/WindowsAbstractor.cpp" />
+		<Unit filename="Abstraction Layer/WindowsAbstractor.h" />
+		<Unit filename="Classes/CoreManager.cpp" />
+		<Unit filename="Classes/CoreManager.h" />
+		<Unit filename="Classes/buffer.cpp" />
+		<Unit filename="Classes/buffer.h">
+			<Option virtualFolder="Classes/" />
+		</Unit>
+		<Unit filename="Classes/list.cpp" />
+		<Unit filename="Classes/list.h" />
+		<Unit filename="Classes/md5.cpp" />
+		<Unit filename="Classes/socket.cpp" />
+		<Unit filename="Classes/socket.h" />
+		<Unit filename="Classes/tools.cpp" />
+		<Unit filename="Classes/tools.h" />
+		<Unit filename="Headers/39dylib_Prefix.pch" />
+		<Unit filename="Headers/IncludeDarwin.h" />
+		<Unit filename="Headers/IncludeLinux.h" />
+		<Unit filename="Headers/IncludeWindows.h" />
+		<Unit filename="Headers/VSSynthesiseSingleton.h" />
+		<Unit filename="Headers/includes.h" />
+		<Unit filename="Source/main.cpp" />
 		<Extensions>
 			<code_completion />
+			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

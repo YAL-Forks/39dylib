@@ -7,12 +7,12 @@
 //
 
 /*CREDITS:
- 
+
  39dylib V2.0 by Uriel Griffin.
  This file is a part of the 2.0 version of 39dylib. It is a significant rewrite aimed to
  increase stability whilst remaining API compatible with 39dylib/39dll, revamping the internal
  codebase to support feature additions.
- 
+
 */
 
 /*
@@ -43,34 +43,34 @@
 
 class Abstractor
 {
-    
+
 protected:
-    
+
     static bool instanceFlag;
     static bool createdProperlyFlag;
     static Abstractor *single;
-    
+
     Abstractor();
-    
+
     ~Abstractor();
-    
+
 public:
-    
+
     //You must always call create first or else this will fail.
     static Abstractor* instance();
-    
+
     //A nice, lovely, simple static function that returns the pointer for the platform specific InAppPurchaseManager.
     static Abstractor* createPlatformAbstractor();
-    
+
     //A method that must be implemented by a subclass; initialise anything in relation to in app purchases here.
     virtual void initialisePlatformAbstractor() = 0;
-    
-#pragma mark Hardware Abstraction
+
+//#pragma mark Hardware Abstraction
     //Hardware methods. Stuff like get the MAC address, etc.
     virtual std::string getMacAddress() = 0;
-    
 
-    
+
+
 };
 
 #endif /* defined(___9dylib__Abstractor__) */
