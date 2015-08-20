@@ -23,7 +23,6 @@
  */
 
 #include "tools.h"
-#include <ifaddrs.h>
 
 #include "Abstractor.h"
 

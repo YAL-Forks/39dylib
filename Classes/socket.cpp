@@ -1,32 +1,40 @@
 /*CREDITS:
- 
+
  39dylib by Uriel Griffin
  Based on the original code for 39dll, by Luke Graham. */
 
 /*
- * Copyright © 2011, Vetra Games. 
+ * Copyright © 2011, Vetra Games.
  *
  * This file is part of the 39dylib library.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either 
+ * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public 
+ *
+ * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #include "socket.h"
 #include "buffer.h"
 
+#if(DYLIB_PLATFORM == DYLIB_WINDOWS)
+    int SenderAddrSize = sizeof(SOCKADDR_IN);
+    SOCKADDR_IN CSocket::SenderAddr;
+#else
+
 socklen_t SenderAddrSize = sizeof(SOCKADDR_IN);
 SOCKADDR_IN CSocket::SenderAddr;
+
+#endif
+
 bool CSocket::tcpconnect(char *address, int port, int mode)
 {
 	SOCKADDR_IN addr;
@@ -157,7 +165,7 @@ bool CSocket::udpconnect(int port, int mode)
 
 int CSocket::sendmessage(char *ip, int port, CBuffer *source)
 {
-	
+
 	if(sockid<0)return -1;
 	int size = 0;
 	SOCKADDR_IN addr;
@@ -236,6 +244,7 @@ int CSocket::receivemessage(int len, CBuffer*destination)
 			size = (int)recv(sockid, buff, len, 0);
 		}
 	}
+
 	if(size > 0)
 	{
 		destination->clear();

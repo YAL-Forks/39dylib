@@ -51,6 +51,7 @@
 #include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <ifaddrs.h>
 #include "TargetConditionals.h"
 
 
@@ -99,6 +100,5 @@ typedef struct sockaddr SOCKADDR;
 
 #define min(a, b) ({ __typeof__(a) _a = a, _b = b; _a < _b ? _a : _b; })
 #define max(a, b) ({ __typeof__(a) _a = a, _b = b; _a < _b ? _b : _a; })
-
 
 #endif
