@@ -621,45 +621,48 @@ filesize(double fileid)
 }
 #endif
 
-double
-iptouint(char*ip)
+*/
+ 
+DYLIBEXPORT double iptouint(char*ip)
 {
 	return CTools::ip2uint(ip);
 }
-char*
-uinttoip(double ip)
+
+DYLIBEXPORT char* uinttoip(double ip)
 {
 	return CTools::uint2ip((unsigned int)ip);
 }
-int
-AddBuffer(CBuffer*b)
+
+//Private function?
+int AddBuffer(CBuffer*b)
 {
-	for(int i = 0; i < buffers.count; i ++)
+    for(int i = 0; i < CoreManager::instance()->buffers.size(); i ++)
 	{
-		if(buffers[i] == NULL)
+		if(CoreManager::instance()->buffers[i] == NULL)
 		{
-			buffers.set(i, b);
+            CoreManager::instance()->buffers[i] = b;//buffers.set(i, b);
 			return i;
 		}
 	}
-	buffers.Add(b);
-	return buffers.count-1;
+    CoreManager::instance()->buffers.push_back(b);
+	return (int)CoreManager::instance()->buffers.size()-1;
 }
 
-int
-AddSocket(CSocket*b)
+int AddSocket(CSocket*b)
 {
-	for(int i = 0; i < sockets.count; i ++)
+	for(int i = 0; i < CoreManager::instance()->sockets.size(); i ++)
 	{
-		if(sockets[i] == NULL)
+		if(CoreManager::instance()->sockets[i] == NULL)
 		{
-			sockets.set(i, b);
+			CoreManager::instance()->sockets[i] = b;
 			return i;
 		}
 	}
-	sockets.Add(b);
-	return sockets.count-1;
+    CoreManager::instance()->sockets.push_back(b);
+	return (int)CoreManager::instance()->sockets.size()-1;
 }
+ 
+/*
 
 #if 0
 int

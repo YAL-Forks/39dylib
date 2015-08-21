@@ -31,11 +31,11 @@
 		A4E3D3F31B84A124006AA8E3 /* CoreManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3D3F01B84A124006AA8E3 /* CoreManager.cpp */; };
 		A4E3D3F41B84A124006AA8E3 /* CoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E3D3F11B84A124006AA8E3 /* CoreManager.h */; };
 		A4E3D3F91B84AD6C006AA8E3 /* MACAddressUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3D3F71B84AD6C006AA8E3 /* MACAddressUtility.cpp */; };
-		A4E3D3FA1B84AD6C006AA8E3 /* MACAddressUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3D3F71B84AD6C006AA8E3 /* MACAddressUtility.cpp */; };
 		A4E3D3FB1B84AD6C006AA8E3 /* MACAddressUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E3D3F81B84AD6C006AA8E3 /* MACAddressUtility.h */; };
 		A4E3D3FF1B84B19D006AA8E3 /* DarwinAbstractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E3D3FD1B84B19D006AA8E3 /* DarwinAbstractor.m */; };
 		A4E3D4001B84B19D006AA8E3 /* DarwinAbstractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E3D3FD1B84B19D006AA8E3 /* DarwinAbstractor.m */; };
 		A4E3D4011B84B19D006AA8E3 /* DarwinAbstractor.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E3D3FE1B84B19D006AA8E3 /* DarwinAbstractor.h */; };
+		A4E3D4201B8773F4006AA8E3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E3D41F1B8773F4006AA8E3 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,12 +70,13 @@
 		A4E3D3E81B84A0BC006AA8E3 /* VSSynthesiseSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSynthesiseSingleton.h; sourceTree = "<group>"; };
 		A4E3D3F01B84A124006AA8E3 /* CoreManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoreManager.cpp; sourceTree = "<group>"; };
 		A4E3D3F11B84A124006AA8E3 /* CoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreManager.h; sourceTree = "<group>"; };
-		A4E3D3F51B84A4BA006AA8E3 /* IncludeDarwin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncludeDarwin.h; sourceTree = "<group>"; };
+		A4E3D3F51B84A4BA006AA8E3 /* IncludeDarwin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = IncludeDarwin.h; sourceTree = "<group>"; };
 		A4E3D3F61B84A516006AA8E3 /* IncludeLinux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncludeLinux.h; sourceTree = "<group>"; };
 		A4E3D3F71B84AD6C006AA8E3 /* MACAddressUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MACAddressUtility.cpp; sourceTree = "<group>"; };
 		A4E3D3F81B84AD6C006AA8E3 /* MACAddressUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACAddressUtility.h; sourceTree = "<group>"; };
 		A4E3D3FD1B84B19D006AA8E3 /* DarwinAbstractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DarwinAbstractor.m; sourceTree = "<group>"; };
 		A4E3D3FE1B84B19D006AA8E3 /* DarwinAbstractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DarwinAbstractor.h; sourceTree = "<group>"; };
+		A4E3D41F1B8773F4006AA8E3 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FF388E271B819BD900C67D9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FF388E2E1B819C4E00C67D9B /* lib39dylibMac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = lib39dylibMac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF388E491B819CDE00C67D9B /* lib39dylibiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = lib39dylibiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E3D4201B8773F4006AA8E3 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +204,7 @@
 		FF388E291B819BFD00C67D9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4E3D41F1B8773F4006AA8E3 /* IOKit.framework */,
 				FF388E271B819BD900C67D9B /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -323,7 +326,6 @@
 				A45A5CFA1B838C5600A0B2FD /* socket.cpp in Sources */,
 				A45A5CF21B838C5600A0B2FD /* buffer.cpp in Sources */,
 				A45A5CF81B838C5600A0B2FD /* md5.cpp in Sources */,
-				A4E3D3FA1B84AD6C006AA8E3 /* MACAddressUtility.cpp in Sources */,
 				A4E3D4001B84B19D006AA8E3 /* DarwinAbstractor.m in Sources */,
 				A4E3D3F31B84A124006AA8E3 /* CoreManager.cpp in Sources */,
 				A4E3D3E71B849E61006AA8E3 /* main.cpp in Sources */,
@@ -339,11 +341,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};
@@ -353,9 +357,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};

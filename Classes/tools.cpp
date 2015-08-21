@@ -57,7 +57,7 @@ unsigned int CTools::ip2uint(char *ip)
 char* CTools::uint2ip(unsigned int ip)
 {
 	IN_ADDR a;
-	a.s_addr = (u_long)ip;
+    a.s_addr = (unsigned int)ip;//a.s_addr = (u_long)ip;
 	return inet_ntoa(a);
 }
 
