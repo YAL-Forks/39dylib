@@ -1,2 +1,6 @@
-39DLL.layout
-39dylib.layout
+Build/
+/*.layout
+39dylib.depend
+39dylib.dll
+lib39dylib.a
+lib39dylib.def
